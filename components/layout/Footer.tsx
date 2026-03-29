@@ -1,8 +1,10 @@
 import { Globe, Share2 } from 'lucide-react';
+import Link from 'next/link';
 
 // Tipos
 type LinkItem = {
   label: string;
+  href: string;
 };
 
 type Section = {
@@ -17,25 +19,25 @@ const sections: Section[] = [
   {
     title: 'Enlaces Rápidos',
     links: [
-      { label: 'Trámites en línea' },
-      { label: 'TUPA' },
-      { label: 'Mesa de Partes' },
-      { label: 'Normativa' },
+      { label: 'Trámites en línea', href: '/tramites' },
+      { label: 'TUPA', href: '/tupa' },
+      { label: 'Mesa de Partes', href: '/mesa-de-partes' },
+      { label: 'Normativa', href: '/normativa' },
     ],
   },
   {
     title: 'Transparencia',
     links: [
-      { label: 'Privacidad' },
-      { label: 'Términos de Uso' },
-      { label: 'Portal de Transparencia' },
-      { label: 'Contacto' },
+      { label: 'Privacidad', href: '/privacidad' },
+      { label: 'Términos de Uso', href: '/terminos' },
+      { label: 'Portal de Transparencia', href: '/transparencia' },
+      { label: 'Contacto', href: '/contacto' },
     ],
   },
   {
     title: 'Sede Central',
-    content: 'Av. Los Próceres 123, Iquitos - Loreto, Perú',
-    isSocial: true,
+    content: 'Arequipa 216, Puerto Maldonado 17001',
+    isSocial: false,
   },
 ];
 
@@ -51,11 +53,13 @@ const FooterSection = ({ section }: { section: Section }) => {
       {section.links && (
         <ul className="space-y-4 text-sm font-medium text-[#6B769B]">
           {section.links.map((link) => (
-            <li
-              key={link.label}
-              className="hover:text-white cursor-pointer transition-colors"
-            >
-              {link.label}
+            <li key={link.label}>
+              <Link
+                href={link.href}
+                className="hover:text-white transition-colors text-[#6B769B] text-sm font-medium"
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -85,9 +89,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#0A0D1A] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-          
+
           {/* Columna fija (branding) */}
           <div className="space-y-6">
             <h3 className="text-xl font-black tracking-tight">

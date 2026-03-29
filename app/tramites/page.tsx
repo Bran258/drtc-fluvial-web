@@ -1,4 +1,4 @@
-import TramitesPage from "@/features/tramites/components/TramitesPage";
+import { TramitesPage } from "@/features/tramites";
 
 export default function Page() {
   return <TramitesPage />;
