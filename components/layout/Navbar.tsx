@@ -49,7 +49,7 @@ export default function Navbar() {
             Agendar cita
           </Link>
 
-          <Link href="/consulta" className={`${linkClass} ${isActive("/consulta") ? "text-blue-700" : "text-slate-600"}`}>
+          <Link href="/consultar-tramite" className={`${linkClass} ${isActive("/consultar-tramite") ? "text-blue-700" : "text-slate-600"}`}>
             Consultar trámite
           </Link>
         </div>
@@ -92,7 +92,7 @@ export default function Navbar() {
               Agendar cita
             </Link>
 
-            <Link onClick={closeMenu} href="/consulta" className={linkClass}>
+            <Link onClick={closeMenu} href="/consultar-tramite" className={linkClass}>
               Consultar trámite
             </Link>
 
