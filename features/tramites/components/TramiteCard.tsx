@@ -50,10 +50,6 @@ const TramiteCard = ({
   return (
     <MotionWrapper direction="left">
       <div
-        onClick={() => {
-          if (config.disabled) return;
-          onClick?.();
-        }}
         className={`
         group relative
         rounded-2xl p-6
@@ -94,6 +90,10 @@ const TramiteCard = ({
         {/* BOTTOM */}
         <div className="mt-6">
           <button
+            onClick={() => {
+              if (config.disabled) return;
+              onClick?.();
+            }}
             disabled={config.disabled}
             className={`
             w-full flex items-center justify-center gap-2

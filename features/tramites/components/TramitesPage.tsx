@@ -14,7 +14,7 @@ export default function TramitesPage() {
     <div className="max-w-7xl mx-auto p-6">
       <SectionTitle
         title="Trámites disponibles"
-        description="Selecciona el trámite que deseas realizar"
+        description="Selecciona el trámite que desea información o realizar. Cada trámite tiene requisitos y pasos específicos, así que asegúrate de revisar los detalles antes de comenzar."
       />
 
       <div className="grid md:grid-cols-3 gap-6 mt-8">
