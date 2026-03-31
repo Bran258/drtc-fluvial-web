@@ -1,0 +1,1 @@
+export { default as ContactanosPage } from "./components/ContactanosPage";

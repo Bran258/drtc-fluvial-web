@@ -12,8 +12,11 @@ import {
     Phone,
     CalendarRange
 } from 'lucide-react';
+import { ENV } from '@/config/env';
 
 const DetalleTramite = () => {
+    const numeroCelular = ENV.NUMERO_CELULAR;
+    
     const pasos = [
         { icon: <FileText size={20} />, label: 'Solicitud', sub: 'PASO 01', active: true },
         { icon: <ClipboardCheck size={20} />, label: 'Validación', sub: 'PASO 02', active: false },
@@ -126,7 +129,7 @@ const DetalleTramite = () => {
                     </div>
                     <div>
                         <p className="text-[10px] font-bold text-gray-400 uppercase">¿Necesitas Ayuda?</p>
-                        <p className="text-lg font-bold text-blue-900 leading-none">0800-123-456</p>
+                        <p className="text-lg font-bold text-blue-900 leading-none">{numeroCelular}</p>
                     </div>
                 </div>
 

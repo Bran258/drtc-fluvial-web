@@ -41,16 +41,16 @@ export default function Navbar() {
             Trámites
           </Link>
 
-          <Link href="/requisitos" className={`${linkClass} ${isActive("/requisitos") ? "text-blue-700" : "text-slate-600"}`}>
-            Validar requisitos
-          </Link>
-
-          <Link href="/citas" className={`${linkClass} ${isActive("/citas") ? "text-blue-700" : "text-slate-600"}`}>
+          <Link href="/agendar-cita" className={`${linkClass} ${isActive("/agendar-cita") ? "text-blue-700" : "text-slate-600"}`}>
             Agendar cita
           </Link>
 
           <Link href="/consultar-tramite" className={`${linkClass} ${isActive("/consultar-tramite") ? "text-blue-700" : "text-slate-600"}`}>
             Consultar trámite
+          </Link>
+
+          <Link href="/contactanos" className={`${linkClass} ${isActive("/contactanos") ? "text-blue-700" : "text-slate-600"}`}>
+            Contactanos
           </Link>
         </div>
 
@@ -84,16 +84,16 @@ export default function Navbar() {
               Trámites
             </Link>
 
-            <Link onClick={closeMenu} href="/requisitos" className={linkClass}>
-              Validar requisitos
-            </Link>
-
-            <Link onClick={closeMenu} href="/citas" className={linkClass}>
+            <Link onClick={closeMenu} href="/agendar-cita" className={linkClass}>
               Agendar cita
             </Link>
 
             <Link onClick={closeMenu} href="/consultar-tramite" className={linkClass}>
               Consultar trámite
+            </Link>
+
+            <Link onClick={closeMenu} href="/contactanos" className={linkClass}>
+              Contactanos
             </Link>
 
             <Link
